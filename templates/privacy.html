@@ -1,24 +1,6 @@
-{% extends "_base.html" %} {% block content %}
+{% extends "_base.html" %}
 
-<body class="min-h-screen flex flex-col text-black">
-    <!-- Header Section -->
-    <header class="bg-blue-900 text-white shadow-md">
-        <nav class="container mx-auto px-8 py-3">
-            <div class="flex justify-between items-center">
-                <a href="/" class="text-white text-2xl md:text-3xl font-extrabold">MEC 2025</a>
-                <div class="flex items-center space-x-4">
-                    <a href="https://www.linkedin.com/company/munich-embedded-conference" target="_blank" title="Unserer LinkedIn Seite folgen" class="px-4 text-white hover:text-blue-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                    </a>
-                    <a href="/privacy" class="text-white font-bold underline">DE</a>
-                    <span class="text-gray-400">|</span>
-                    <a href="/en/privacy" class="text-white hover:text-blue-200">EN</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+{% block content %}
     <main class="grow bg-white py-16">
         <div class="container mx-auto px-4">
             <div class="highlighted-grid-element max-w-4xl mx-auto">
@@ -64,50 +46,6 @@
                     <p> In den Fällen, in denen die Website der Selbstdarstellung z.B. von Vereinen oder Kleinunternehmen dient, keine personenbezogenen Daten an den Betreiber fließen und kein Tracking stattfindet, liegt keine Auftragsdatenverarbeitung vor. Weiter heißt es dort: „Der Umstand, dass auch beim Hosting statischer Websites zwangsläufig IP-Adressen, also personenbezogene Daten, verarbeitet werden müssen, führt nicht zur Annahme einer Auftragsdatenverarbeitung. Dies wäre nicht sachgerecht. Die (kurzfristige) Speicherung von IP-Adressen ist vielmehr der telekommunikativen Zugangsvermittlung des Website-Hosters nach dem TKG zuzurechnen und dient in erster Linie dessen Sicherheitszwecken. <a href="https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf">https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf</a>
                     <p> Wir gehen davon aus, dass diese Ausnahme für Cloudflare Pages gilt. </p>
                 </div>
-                <hr class="my-12 border-t border-gray-300">
-                <h1 class="text-3xl md:text-4xl font-bold mb-8">Privacy Policy</h1>
-                <div class="text-gray-700">
-                    <p>In the following, we would like to inform you about how we process your data.</p>
-                    <h2 class="text-xl font-bold mt-8 mb-4">Data Controller and Data Protection Officer</h2>
-                    <p>
-                        <strong>Data Controller:</strong>
-                        <br> Systemscape GmbH<br>Bergmannstr. 12<br>80339 München<br>E-Mail: {{ macros::email(email="contact@systemscape.de") }}
-                    </p>
-                    <p>
-                        <strong>Data Protection Officer:</strong>
-                        <br>Joel Schulz-Andres<br>c/o Systemscape GmbH<br>Bergmannstr. 12<br>80339 München<br>E-Mail: {{ macros::email(email="contact@systemscape.de") }}
-                    </p>
-                    <h2 class="text-xl font-bold mt-8 mb-4">Hosting and Content Delivery Network (CDN)</h2>
-                    <p>Our host Cloudflare (Cloudflare Germany GmbH, Rosental 7, c/o Mindspace, 80331 Munich, Germany) collects the following data transmitted by your browser in so-called log files:</p>
-                    <ul class="list-disc ml-6 mb-4">
-                        <li>IP address</li>
-                        <li>The address of the previously visited website (Referer Request Header)</li>
-                        <li>Date and time of the request</li>
-                        <li>Time zone difference to Greenwich Mean Time</li>
-                        <li>Content of the request</li>
-                        <li>HTTP status code</li>
-                        <li>Transferred amount of data</li>
-                        <li>Website from which the request comes</li>
-                        <li>Information about browser and operating system</li>
-                    </ul>
-                    <p>This is necessary to display our website, ensure stability and security, and increase delivery speed through the Content Delivery Network (CDN). This corresponds to our legitimate interest pursuant to Art. 6(1)(f) GDPR. A CDN is a network of globally distributed servers that can optimally deliver content to website users.</p>
-                    <p>No tracking occurs and we have no direct access to this data. The log files are deleted after a maximum of 25 hours.</p>
-                    <p>The processing by Cloudflare corresponds to our legitimate interest pursuant to Art. 6(1)(f) GDPR in not having to maintain server infrastructure and a Content Delivery Network on our own premises.</p>
-                    <p>You have the right to object to the processing. Whether the objection is successful must be determined as part of a balancing of interests.</p>
-                    <p>The data will be deleted as soon as the purpose for processing ceases to apply. Personal data is stored by Cloudflare only as long as necessary for the described purposes.</p>
-                    <p>The processing of the data specified in this section is neither legally nor contractually required. The functionality of the website cannot be guaranteed without the processing.</p>
-                    <p>Cloudflare has implemented compliance measures for international data transfers. These apply to all worldwide activities where Cloudflare processes personal data of natural persons in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs) and participation in the EU-US Data Privacy Framework. For more information, visit: <a href="https://www.cloudflare.com/cloudflare_customer_SCCs.pdf" target="_blank" class="text-blue-600 hover:text-blue-800">https://www.cloudflare.com/cloudflare_customer_SCCs.pdf</a>
-                    </p>
-                    <h2 class="text-xl font-bold mt-8 mb-4">Your Rights as a Data Subject</h2>
-                    <p>As a data subject, you have the right to information, the right to rectification or erasure, the right to restriction of processing, and the right to object to the processing of your data. If you have given us consent, you can revoke it at any time with effect for the future.</p>
-                    <p>Please send your objection or revocation informally to the above address of the Data Controller via (E-)Mail.</p>
-                    <p>Furthermore, you have the right to data portability. You also have the right to lodge a complaint with a supervisory authority about the processing.</p>
-                    <h2 class="text-xl font-bold mt-8 mb-4">Legal Note</h2>
-                    <p>In principle, a data processing agreement must be concluded with the host. The Bavarian State Office for Data Protection Supervision has made an exception for hosting purely static websites.</p>
-                    <p> In cases where the website serves self-presentation purposes, e.g., for associations or small businesses, no personal data flows to the operator, and no tracking takes place, there is no commissioned data processing. It further states: "The fact that IP addresses, i.e., personal data, must necessarily be processed even when hosting static websites does not lead to the assumption of commissioned data processing. This would not be appropriate. The (short-term) storage of IP addresses is rather to be attributed to the telecommunications access mediation of the website host according to the TKG and primarily serves the host's security purposes. <a href="https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf">https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf</a>
-                    </p>
-                    <p> We assume that this exception applies to Cloudflare Pages.</p>
-                </div>
                 <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-sm">
                     <p class="text-gray-700">
                         <strong>Hinweis:</strong> Die englische Version dient lediglich der Information. Im Zweifel ist die deutsche Version maßgeblich.
@@ -119,19 +57,4 @@
             </div>
         </div>
     </main>
-    <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-8 mt-auto">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div>
-                    <p>&copy; 2025 Munich Embedded. Alle Rechte vorbehalten.</p>
-                </div>
-                <div class="mt-4 md:mt-0">
-                    <a href="/newsletter" class="text-white hover:text-blue-200">Newsletter</a>
-                    <a href="https://www.systemscape.de/de/contact/" target="_blank" class="text-white hover:text-blue-200 mx-3">Impressum</a>
-                    <a href="/privacy" class="text-white hover:text-blue-200">Datenschutz</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body> {% endblock %}
+{% endblock %}
