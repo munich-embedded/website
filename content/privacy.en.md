@@ -3,21 +3,23 @@ title = "Privacy Policy"
 template = "page.html"
 +++
 
+# Privacy Policy
+
 In the following, we would like to inform you about how we process your data.
 
 ## Data Controller and Data Protection Officer
 
-**Data Controller:**  
-Systemscape GmbH  
-Bergmannstr. 12  
-80339 München  
+**Data Controller:**
+Systemscape GmbH
+Bergmannstr. 12
+80339 München
 E-Mail: {{ email(email="contact@systemscape.de") }}
 
-**Data Protection Officer:**  
-Joel Schulz-Andres  
-c/o Systemscape GmbH  
-Bergmannstr. 12  
-80339 München  
+**Data Protection Officer:**
+Joel Schulz-Andres
+c/o Systemscape GmbH
+Bergmannstr. 12
+80339 München
 E-Mail: {{ email(email="contact@systemscape.de") }}
 
 ## Hosting and Content Delivery Network (CDN)

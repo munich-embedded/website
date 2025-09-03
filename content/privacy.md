@@ -3,6 +3,8 @@ title = "Datenschutzerklärung"
 template = "page.html"
 +++
 
+# Datenschutzerklärung
+
 Im Folgenden möchten wir Sie darüber informieren, wie wir mit Ihren Daten umgehen.
 
 ## Verantwortlicher und Datenschutzbeauftragter
