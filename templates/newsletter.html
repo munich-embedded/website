@@ -1,0 +1,45 @@
+{% extends "_base.html" %} {% block content %}
+<body class="min-h-screen flex flex-col text-black">
+    <!-- Header Section -->
+    <header class="bg-blue-900 text-white shadow-md">
+        <nav class="container mx-auto px-8 py-3">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-white text-2xl md:text-3xl font-extrabold">MEC 2025</a>
+                <div class="flex items-center space-x-4">
+                    <a href="https://www.linkedin.com/company/munich-embedded-conference" target="_blank" title="Unserer LinkedIn Seite folgen" class="px-4 text-white hover:text-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="/privacy" class="text-white font-bold underline">DE</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="/en/privacy" class="text-white hover:text-blue-200">EN</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="">
+        <iframe
+            scrolling="no"
+            style="width:100%; min-height:1100px; height:auto; filter: chroma(color='#FFFFFF'); border: 0;"
+            frameborder="no"
+            src="https://ea.sendcockpit.com/_s.php?&fid=54605&fpw=033e2f99177f31e752f803cd5c36c622">
+        </iframe>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <p>&copy; 2025 Munich Embedded. Alle Rechte vorbehalten.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="/newsletter" class="text-white hover:text-blue-200">Newsletter</a>
+                    <a href="https://www.systemscape.de/de/contact/" target="_blank" class="text-white hover:text-blue-200 mx-3">Impressum</a>
+                    <a href="/privacy" class="text-white hover:text-blue-200">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+{% endblock %}
