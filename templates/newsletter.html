@@ -1,13 +1,11 @@
 {% extends "_base.html" %}
 
+{% block page_title %}{{ page.title }}{% endblock %}
+
 {% block content %}
-    <main class="">
-        <iframe
-            scrolling="yes"
-            class="w-full min-h-screen border-0"
-            style="filter: chroma(color='#FFFFFF');"
-            frameborder="no"
-            src="https://ea.sendcockpit.com/_s.php?&fid=54605&fpw=033e2f99177f31e752f803cd5c36c622">
-        </iframe>
+    <main class="grow">
+        <div class="newsletter-content bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            {{ page.content | safe }}
+        </div>
     </main>
 {% endblock %}

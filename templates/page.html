@@ -1,7 +1,18 @@
 {% extends "_base.html" %}
 
-{% block content %}
-    <main>
+{% block page_title %}{{ page.title }}{% endblock %}
 
+{% block content %}
+    <main class="grow bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="highlighted-grid-element max-w-4xl mx-auto">
+                {% if page.title %}
+                <h1 class="text-3xl md:text-4xl font-bold mb-8">{{ page.title }}</h1>
+                {% endif %}
+                <div class="text-gray-700">
+                    {{ page.content | safe }}
+                </div>
+            </div>
+        </div>
     </main>
 {% endblock %}
