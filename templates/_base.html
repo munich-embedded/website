@@ -1,11 +1,11 @@
 {% import "_macros.html" as macros %}
 <!DOCTYPE html>
-<html lang="en" class="bg-gray-50">
+<html lang="{% if current_path and current_path is starting_with('/en/') %}en{% else %}de{% endif %}" class="bg-gray-50">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Munich Embedded 2025</title>
+        <title>{% block page_title %}Munich Embedded 2025{% endblock %}</title>
         <link href="/fonts/fonts.css" rel="stylesheet" integrity="sha384-{{ get_hash(path='fonts/fonts.css', sha_type=384, base64=true) | safe }}">
         <link href="/css/style.css" rel="stylesheet" integrity="sha384-{{ get_hash(path='css/style.css', sha_type=384, base64=true) | safe }}">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -29,8 +29,13 @@
         </script>
     </head>
 
-
-    {% block content %}
-    {% endblock %}
+    <body class="min-h-screen flex flex-col text-black">
+        {{ macros::navigation(page_url=current_path, page_title=page.title | default(value=section.title), lang=lang) }}
+        
+        {% block content %}
+        {% endblock %}
+        
+        {{ macros::footer(page_url=current_path, lang=lang) }}
+    </body>
 
 </html>

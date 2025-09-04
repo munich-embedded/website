@@ -7,6 +7,30 @@ compile_sass = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
+default_language = "de"
+
+[languages]
+[languages.en]
+title = "Munich Embedded"
+
+[languages.en.translations]
+linkedin_tooltip = "Follow our LinkedIn Page"
+github_tooltip = "Our GitHub Repository"
+newsletter = "Newsletter"
+newsletter_tooltip = "Unseren Newsletter abonnieren"
+imprint = "Imprint"
+privacy_policy = "Privacy Policy"
+all_rights_reserved = "All rights reserved"
+
+[translations]
+linkedin_tooltip = "Unserer LinkedIn Seite folgen"
+github_tooltip = "Unser GitHub Repository"
+newsletter = "Newsletter"
+newsletter_tooltip = "Subscribe to our Newsletter"
+imprint = "Impressum"
+privacy_policy = "Datenschutz"
+all_rights_reserved = "Alle Rechte vorbehalten"
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
