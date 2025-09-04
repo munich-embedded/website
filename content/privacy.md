@@ -9,17 +9,17 @@ Im Folgenden möchten wir Sie darüber informieren, wie wir mit Ihren Daten umge
 
 ## Verantwortlicher und Datenschutzbeauftragter
 
-**Verantwortlicher:**  
-Systemscape GmbH  
-Bergmannstr. 12  
-80339 München  
+**Verantwortlicher:**\
+Systemscape GmbH\
+Bergmannstr. 12\
+80339 München\
 E-Mail: {{ email(email="contact@systemscape.de") }}
 
-**Datenschutzbeauftragter:**  
-Joel Schulz-Andres  
-c/o Systemscape GmbH  
-Bergmannstr. 12  
-80339 München  
+**Datenschutzbeauftragter:**\
+Joel Schulz-Andres\
+c/o Systemscape GmbH\
+Bergmannstr. 12\
+80339 München\
 E-Mail: {{ email(email="contact@systemscape.de") }}
 
 ## Hosting und Content Delivery Network (CDN)
@@ -66,13 +66,35 @@ In den Fällen, in denen die Website der Selbstdarstellung z.B. von Vereinen ode
 
 Wir gehen davon aus, dass diese Ausnahme für Cloudflare Pages gilt.
 
+***
+
+## Datenschutzerklärung für den Newsletter
+
+### Informationen zum Newsletter
+
+Wenn Sie unseren Newsletter abonnieren, werden Ihre Angaben aus dem Anmeldeformular an den Verantwortlichen für die Datenverarbeitung gesendet. Die Registrierung für den Newsletter geschieht über ein Double-Opt-in-Verfahren, was bedeutet, dass Sie nach der Anmeldung eine E-Mail zur Bestätigung Ihrer Registrierung erhalten. Diese Bestätigung ist erforderlich, um die Anmeldung mit einer fremden E-Mail-Adresse zu verhindern. Zum Zeitpunkt der Newsletter-Anmeldung werden die IP-Adresse und der Zeitpunkt der Anmeldung gespeichert, um einen möglichen Missbrauch zu verhindern. Ihre Daten werden nicht an Dritte weitergegeben, es sei denn, es besteht eine gesetzliche Pflicht zur Weitergabe. Die Daten dienen ausschließlich dem Versand des Newsletters. Das Abonnement kann jederzeit beendet werden, und die Einwilligung zur Speicherung der Daten kann widerrufen werden. Hierfür gibt es in jedem Newsletter einen entsprechenden Abmeldelink. Die Rechtsgrundlage für die Datenverarbeitung nach der Anmeldung zum Newsletter basiert auf Ihrer Zustimmung gemäß Art. 6 Abs. 1 lit. a) DSGVO und für den Versand des Newsletters im Kontext des Verkaufs von Waren oder Dienstleistungen auf § 7 Abs. 3 UWG.
+
+### Verwendung von Clever Elements
+
+**Zweck und Beschreibung:** Clever Elements wird für das Versenden von Newslettern verwendet. Der Dienstleister ist die Clever Elements GmbH, Lohmühlenstr. 65, 12435 Berlin, Deutschland. Clever Elements wird eingesetzt, um den Newsletter-Versand und dessen Analyse zu organisieren. Die für den Newsletter angegebenen Daten werden auf Servern von Clever Elements in Deutschland gespeichert. Falls Sie die Analyse durch Clever Elements nicht wünschen, können Sie den Newsletter abbestellen oder uns informieren, damit wir kein persönliches Tracking verwenden. Ein Abmeldelink ist in jedem Newsletter enthalten. Die über Clever Elements gesendeten E-Mails enthalten ein Tracking-Pixel, das sich beim Öffnen mit den Servern verbindet, sodass festgestellt werden kann, ob eine E-Mail geöffnet wurde. Darüber hinaus können wir ermitteln, welche Links im Newsletter angeklickt werden. Links können als Tracking-Links konfiguriert sein, um Klicks zu erfassen.
+
+**Rechtsgrundlage:** Die rechtliche Basis für die Verarbeitung der Daten liegt in Art. 6 Abs. 1 lit. a) DSGVO.
+
+**Empfänger:** Der Empfänger der Daten ist die Clever Elements GmbH.
+
+**Übermittlung in Drittländer:** Es findet keine Datenübermittlung in Drittländer statt.
+
+**Speicherdauer:** Die für den Newsletter-Bezug bei uns hinterlegten Daten werden bis zur Abmeldung aus dem Newsletter gespeichert und nach dem Abbestellen sowohl von unseren als auch von den Servern von Clever Elements gelöscht. Daten, die aus anderen Gründen bei uns gespeichert sind, bleiben hiervon unberührt.
+
+**Widerruf:** Sie können Ihre Zustimmung zur Datenverarbeitung jederzeit für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt unberührt.
+
 {% raw() %}
 <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-sm">
     <p class="text-gray-700">
-        <strong>Hinweis:</strong> Die englische Version dient lediglich der Information. Im Zweifel ist die deutsche Version maßgeblich.
+        <strong>Hinweis:</strong> Die englische Version der Datenschutzerklärung dient lediglich der Information. Im Zweifel ist die deutsche Version maßgeblich.
     </p>
     <p class="text-gray-700 mt-2">
-        <strong>Note:</strong> The English version is for information purposes only. In case of doubt, the German version is authoritative.
+        <strong>Note:</strong> The English version of the privacy policy is for information purposes only. In case of doubt, the German version is authoritative.
     </p>
 </div>
 {% end %}

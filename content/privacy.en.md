@@ -9,17 +9,17 @@ In the following, we would like to inform you about how we process your data.
 
 ## Data Controller and Data Protection Officer
 
-**Data Controller:**
-Systemscape GmbH
-Bergmannstr. 12
-80339 München
+**Data Controller:**\
+Systemscape GmbH\
+Bergmannstr. 12\
+80339 München\
 E-Mail: {{ email(email="contact@systemscape.de") }}
 
-**Data Protection Officer:**
-Joel Schulz-Andres
-c/o Systemscape GmbH
-Bergmannstr. 12
-80339 München
+**Data Protection Officer:**\
+Joel Schulz-Andres\
+c/o Systemscape GmbH\
+Bergmannstr. 12\
+80339 München\
 E-Mail: {{ email(email="contact@systemscape.de") }}
 
 ## Hosting and Content Delivery Network (CDN)
@@ -66,13 +66,35 @@ In cases where the website serves self-presentation purposes, e.g., for associat
 
 We assume that this exception applies to Cloudflare Pages.
 
+***
+
+## Privacy Policy for the Newsletter
+
+### Newsletter Information
+
+When you subscribe to our newsletter, your information from the registration form is sent to the data controller. Registration for the newsletter uses a double opt-in procedure, which means that after registration you will receive an email to confirm your registration. This confirmation is required to prevent registration with a foreign email address. At the time of newsletter registration, the IP address and the time of registration are stored to prevent possible misuse. Your data will not be passed on to third parties unless there is a legal obligation to do so. The data is used exclusively for sending the newsletter. The subscription can be terminated at any time, and consent to store the data can be withdrawn. For this purpose, there is a corresponding unsubscribe link in every newsletter. The legal basis for data processing after newsletter registration is based on your consent according to Art. 6(1)(a) GDPR and for sending newsletters in the context of selling goods or services on § 7(3) UWG.
+
+### Use of Clever Elements
+
+**Purpose and Description:** Clever Elements is used for sending newsletters. The service provider is Clever Elements GmbH, Lohmühlenstr. 65, 12435 Berlin, Germany. Clever Elements is used to organize newsletter sending and its analysis. The data provided for the newsletter is stored on Clever Elements servers in Germany. If you do not want the analysis by Clever Elements, you can unsubscribe from the newsletter or inform us so that we do not use personal tracking. An unsubscribe link is included in every newsletter. Emails sent via Clever Elements contain a tracking pixel that connects to the servers when opened, so it can be determined whether an email has been opened. Furthermore, we can determine which links in the newsletter are clicked. Links can be configured as tracking links to capture clicks.
+
+**Legal Basis:** The legal basis for processing the data is Art. 6(1)(a) GDPR.
+
+**Recipients:** The recipient of the data is Clever Elements GmbH.
+
+**Transfer to Third Countries:** No data transfer to third countries takes place.
+
+**Storage Duration:** The data stored with us for newsletter subscription is stored until unsubscription from the newsletter and deleted after unsubscription from both our servers and Clever Elements servers. Data stored with us for other reasons remains unaffected.
+
+**Withdrawal:** You can withdraw your consent to data processing at any time for the future. The lawfulness of data processing carried out until withdrawal remains unaffected.
+
 {% raw() %}
 <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-sm">
     <p class="text-gray-700">
-        <strong>Hinweis:</strong> Die englische Version dient lediglich der Information. Im Zweifel ist die deutsche Version maßgeblich.
+        <strong>Hinweis:</strong> Die englische Version der Datenschutzerklärung dient lediglich der Information. Im Zweifel ist die deutsche Version maßgeblich.
     </p>
     <p class="text-gray-700 mt-2">
-        <strong>Note:</strong> The English version is for information purposes only. In case of doubt, the German version is authoritative.
+        <strong>Note:</strong> The English version of the privacy policy is for information purposes only. In case of doubt, the German version is authoritative.
     </p>
 </div>
 {% end %}
