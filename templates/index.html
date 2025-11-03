@@ -37,32 +37,32 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {% set thumb1 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00021.jpg", width=600, height=400, op="fit", quality=80) %}
                     <a href="/me25_pictures/251028_MunichEmbedded_00021.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="{{ thumb1.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                        <img src="{{ thumb1.static_path | trim_start_matches(pat='static') }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
                     </a>
 
                     {% set thumb2 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00043.jpg", width=600, height=400, op="fit", quality=80) %}
                     <a href="/me25_pictures/251028_MunichEmbedded_00043.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="{{ thumb2.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                        <img src="{{ thumb2.static_path | trim_start_matches(pat='static') }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
                     </a>
 
                     {% set thumb3 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00045.jpg", width=600, height=400, op="fit", quality=80) %}
                     <a href="/me25_pictures/251028_MunichEmbedded_00045.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="{{ thumb3.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                        <img src="{{ thumb3.static_path | trim_start_matches(pat='static')  }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
                     </a>
 
                     {% set thumb4 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00054.jpg", width=600, height=400, op="fit", quality=80) %}
                     <a href="/me25_pictures/251028_MunichEmbedded_00054.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="{{ thumb4.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                        <img src="{{ thumb4.static_path | trim_start_matches(pat='static')  }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
                     </a>
 
                     {% set thumb5 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00064.jpg", width=600, height=400, op="fit", quality=80) %}
                     <a href="/me25_pictures/251028_MunichEmbedded_00064.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="{{ thumb5.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                        <img src="{{ thumb5.static_path | trim_start_matches(pat='static')  }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
                     </a>
 
                     {% set thumb6 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00137.jpg", width=600, height=400, op="fit", quality=80) %}
                     <a href="/me25_pictures/251028_MunichEmbedded_00137.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="{{ thumb6.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                        <img src="{{ thumb6.static_path | trim_start_matches(pat='static')  }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
                     </a>
                 </div>
             </div>
