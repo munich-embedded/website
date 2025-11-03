@@ -6,7 +6,7 @@
         <div class="container mx-auto px-8 py-16">
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="md:w-2/3 flex flex-col items-start">
-                    <h1 class="text-4xl lg:text-5xl font-extrabold leading-[1.2]! text-left mb-6"> Munich Embedded 2025 </h1>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold leading-[1.2]! text-left mb-6"> Munich Embedded </h1>
                     <p class="text-lg md:text-xl mb-8"> Conference for Testing, Security and Reliability in Embedded Systems </p>
                     <p class="text-lg mb-8">October 28, 2025 • Munich</p>
                     <div class="flex flex-col sm:flex-row gap-4">
@@ -28,20 +28,41 @@
             </div>
         </div>
     </section>
-    <main class="grow" id="about">
-        <!-- About Section -->
+    <main class="grow" id="gallery">
+        <!-- Gallery Section -->
         <section class="bg-white py-16">
             <div class="container mx-auto px-4">
-                <div class="highlighted-grid-element">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-6"> About the Conference </h2>
-                    <p class="text-gray-700 text-lg mb-4"> The Munich Embedded 2025 (ME25) brings together leading experts and developers from the embedded industry to discuss the most pressing challenges in the field: </p>
-                    <ul class="text-gray-700 mb-6 text-lg">
-                        <li> How can we ensure the <b>quality and security</b> of embedded systems? </li>
-                        <li> Which <b>tools and methods</b> best support our work? </li>
-                        <li> What will the embedded development of the <b>future</b> look like? </li>
-                    </ul>
-                    <p class="text-gray-700 text-lg"> In focused <b>presentations and short lightning talks</b> experts share their experiences on <b>testing strategies, security concepts and development tools.</b> Munich Embedded creates the ideal framework for intensive exchange: With <b>around 50 participants</b> discussions remain concrete and practical. </p>
-                    <p class="text-gray-700 text-lg"> Network with other embedded developers from the region and gain valuable insights for your daily work! </p>
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Munich Embedded 2024 Highlights</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {% set thumb1 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00021.jpg", width=600, height=400, op="fit", quality=80) %}
+                    <a href="/me25_pictures/251028_MunichEmbedded_00021.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ thumb1.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </a>
+
+                    {% set thumb2 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00043.jpg", width=600, height=400, op="fit", quality=80) %}
+                    <a href="/me25_pictures/251028_MunichEmbedded_00043.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ thumb2.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </a>
+
+                    {% set thumb3 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00045.jpg", width=600, height=400, op="fit", quality=80) %}
+                    <a href="/me25_pictures/251028_MunichEmbedded_00045.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ thumb3.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </a>
+
+                    {% set thumb4 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00054.jpg", width=600, height=400, op="fit", quality=80) %}
+                    <a href="/me25_pictures/251028_MunichEmbedded_00054.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ thumb4.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </a>
+
+                    {% set thumb5 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00064.jpg", width=600, height=400, op="fit", quality=80) %}
+                    <a href="/me25_pictures/251028_MunichEmbedded_00064.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ thumb5.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </a>
+
+                    {% set thumb6 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00137.jpg", width=600, height=400, op="fit", quality=80) %}
+                    <a href="/me25_pictures/251028_MunichEmbedded_00137.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ thumb6.url }}" alt="Munich Embedded Conference 2024" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </a>
                 </div>
             </div>
         </section>
