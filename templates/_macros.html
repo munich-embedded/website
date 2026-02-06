@@ -23,9 +23,9 @@
                 <h1 class="mb-1 mt-1 mr-2 leading-0"><a href="{{ prefix }}/" class="text-white text-2xl lg:text-3xl font-extrabold">Munich Embedded</a></h1>
                 <!-- Desktop nav links -->
                 <div class="hidden lg:flex ms-4 items-center gap-4">
-                    <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="conference", lang=lang) }}</a>
-                    <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="archive", lang=lang) }}</a>
-                    <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="community", lang=lang) }}</a>
+                    <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium{% if page_url == '/' or page_url == '/en/' %} underline underline-offset-4{% endif %}">{{ trans(key="conference", lang=lang) }}</a>
+                    <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/archive') or page_url is starting_with('/en/archive') %} underline underline-offset-4{% endif %}">{{ trans(key="archive", lang=lang) }}</a>
+                    <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/community') or page_url is starting_with('/en/community') %} underline underline-offset-4{% endif %}">{{ trans(key="community", lang=lang) }}</a>
                 </div>
             </div>
             <div class="flex items-center gap-3">
@@ -95,9 +95,9 @@
         <!-- Mobile menu -->
         <div id="nav-menu" class="hidden lg:hidden mt-4 pb-2 border-t border-blue-800 pt-4">
             <div class="flex flex-col gap-3">
-                <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="conference", lang=lang) }}</a>
-                <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="archive", lang=lang) }}</a>
-                <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="community", lang=lang) }}</a>
+                <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium{% if page_url == '/' or page_url == '/en/' %} underline underline-offset-4{% endif %}">{{ trans(key="conference", lang=lang) }}</a>
+                <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/archive') or page_url is starting_with('/en/archive') %} underline underline-offset-4{% endif %}">{{ trans(key="archive", lang=lang) }}</a>
+                <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium{% if page_url is starting_with('/community') or page_url is starting_with('/en/community') %} underline underline-offset-4{% endif %}">{{ trans(key="community", lang=lang) }}</a>
                 <div class="flex items-center gap-3 pt-2 border-t border-blue-800">
                     <a href="{{ prefix }}/newsletter" title="{{ trans(key="newsletter_tooltip", lang=lang) }}"
                        class="px-1 text-white hover:text-blue-200">
