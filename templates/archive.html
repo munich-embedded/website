@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+
+{% block page_title %}{{ section.title }} - Munich Embedded{% endblock %}
+
+{% block content %}
+    <main class="grow bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">{{ section.title }}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                {% for page in section.pages %}
+                <a href="{{ page.permalink }}" class="block group">
+                    <div class="highlighted-grid-element flex flex-col items-center justify-center py-12">
+                        <h3 class="text-xl font-bold group-hover:text-blue-600 transition-colors duration-300">{{ page.title }}</h3>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}

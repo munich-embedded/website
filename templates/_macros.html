@@ -11,108 +11,167 @@
 {% endmacro email %}
 
 {% macro navigation(page_url, page_title, lang) %}
+{% if page_url is starting_with('/en') %}
+    {% set_global prefix = "/en" %}
+{% else %}
+    {% set_global prefix = "" %}
+{% endif %}
 <header class="bg-blue-900 text-white shadow-md">
     <nav class="container mx-auto px-8 py-3">
-        <div class="flex flex-col-reverse sm:flex-row justify-between items-center gap-3">
-            <h1 class="mb-1 mt-1 leading-0"><a href="/" class="text-white text-2xl md:text-3xl font-extrabold">Munich Embedded</a></h1>
-            <div class="flex flex-wrap items-center justify-center gap-4">
-                {% if page_url is starting_with('/en/') %}
-                    <a href="/en/newsletter" title="{{ trans(key="newsletter_tooltip", lang=lang) }}"
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <h1 class="mb-1 mt-1 mr-2 leading-0"><a href="{{ prefix }}/" class="text-white text-2xl lg:text-3xl font-extrabold">Munich Embedded</a></h1>
+                <!-- Desktop nav links -->
+                <div class="hidden lg:flex ms-4 items-center gap-4">
+                    <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="conference", lang=lang) }}</a>
+                    <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="archive", lang=lang) }}</a>
+                    <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="community", lang=lang) }}</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <!-- Social icons (hidden on mobile, shown in hamburger menu) -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="{{ prefix }}/newsletter" title="{{ trans(key="newsletter_tooltip", lang=lang) }}"
                        class="px-1 text-white hover:text-blue-200">
                            <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
                              <path fill="currentColor" d="m 24,2 v 14 c 0,1.1 -0.9,2 -2,2 H 2 C 0.9,18 0,17.1 0,16 V 2 C 0,0.9 0.9,0 2,0 h 20 c 1.1,0 2,0.9 2,2 z M 22,2 H 2 V 2.01 L 12,9 22,2.01 Z m 0,14 V 4.99 L 12,11 2,4.99 V 16 Z" />
                            </svg>
                     </a>
-                {% else %}
-                    <a href="/newsletter" title="{{ trans(key="newsletter_tooltip", lang=lang) }}"
+                    <a href="https://www.linkedin.com/company/munich-embedded-conference" target="_blank"
+                       title="{{ trans(key="linkedin_tooltip", lang=lang) }}"
                        class="px-1 text-white hover:text-blue-200">
-                           <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                             <path fill="currentColor" d="m 24,2 v 14 c 0,1.1 -0.9,2 -2,2 H 2 C 0.9,18 0,17.1 0,16 V 2 C 0,0.9 0.9,0 2,0 h 20 c 1.1,0 2,0.9 2,2 z M 22,2 H 2 V 2.01 L 12,9 22,2.01 Z m 0,14 V 4.99 L 12,11 2,4.99 V 16 Z" />
-                           </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
                     </a>
-                {% endif %}
-                <a href="https://www.linkedin.com/company/munich-embedded-conference" target="_blank"
-                   title="{{ trans(key="linkedin_tooltip", lang=lang) }}"
-                   class="px-1 text-white hover:text-blue-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                </a>
-                <a href="https://github.com/munich-embedded/" target="_blank"
-                   title="{{ trans(key="github_tooltip", lang=lang) }}"
-                   class="px-1 text-white hover:text-blue-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-                <a href="https://www.youtube.com/@MunichEmbedded" target="_blank"
-                   title="{{ trans(key="youtube_tooltip", lang=lang) }}"
-                   class="px-1 text-white hover:text-blue-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                </a>
-                <a href="https://matrix.to/#/#munich-embedded:matrix.org" target="_blank"
-                   title="Matrix"
-                   class="pr-4 text-white hover:text-blue-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.488.32.45.214.773.553.96 1.016.293-.39.674-.71 1.14-.96.468-.252.986-.376 1.564-.376.44 0 .842.06 1.205.18.364.12.676.31.94.567.26.254.46.566.6.935.14.37.21.81.21 1.32v5.42H15.88v-4.542c0-.268-.015-.53-.043-.78a1.59 1.59 0 00-.2-.644.98.98 0 00-.446-.428c-.196-.108-.47-.16-.82-.16-.35 0-.626.07-.828.21-.2.14-.357.312-.47.51-.114.2-.187.414-.22.643a4.725 4.725 0 00-.05.663v4.53h-1.56v-4.4c0-.237-.007-.467-.033-.696a1.813 1.813 0 00-.16-.636.99.99 0 00-.394-.468c-.18-.12-.444-.18-.79-.18-.11 0-.26.03-.45.09-.19.058-.37.17-.55.328-.18.16-.332.38-.46.656-.124.28-.187.64-.187 1.084v4.23H6.116V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"/>
-                    </svg>
-                </a>
-                <span>
+                    <a href="https://github.com/munich-embedded/" target="_blank"
+                       title="{{ trans(key="github_tooltip", lang=lang) }}"
+                       class="px-1 text-white hover:text-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@MunichEmbedded" target="_blank"
+                       title="{{ trans(key="youtube_tooltip", lang=lang) }}"
+                       class="px-1 text-white hover:text-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <a href="https://matrix.to/#/#munich-embedded:matrix.org" target="_blank"
+                       title="{{ trans(key="matrix_tooltip", lang=lang) }}"
+                       class="px-1 text-white hover:text-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.488.32.45.214.773.553.96 1.016.293-.39.674-.71 1.14-.96.468-.252.986-.376 1.564-.376.44 0 .842.06 1.205.18.364.12.676.31.94.567.26.254.46.566.6.935.14.37.21.81.21 1.32v5.42H15.88v-4.542c0-.268-.015-.53-.043-.78a1.59 1.59 0 00-.2-.644.98.98 0 00-.446-.428c-.196-.108-.47-.16-.82-.16-.35 0-.626.07-.828.21-.2.14-.357.312-.47.51-.114.2-.187.414-.22.643a4.725 4.725 0 00-.05.663v4.53h-1.56v-4.4c0-.237-.007-.467-.033-.696a1.813 1.813 0 00-.16-.636.99.99 0 00-.394-.468c-.18-.12-.444-.18-.79-.18-.11 0-.26.03-.45.09-.19.058-.37.17-.55.328-.18.16-.332.38-.46.656-.124.28-.187.64-.187 1.084v4.23H6.116V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"/>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Language toggle -->
+                <span class="pl-2">
                 {% if page_url is starting_with('/en') %}
-                    {% if page_url == '/en/' or page_url == '/en' %}
-                        <a href="/" class="text-white hover:text-blue-200">DE</a>
-                        <span class="text-gray-400">|</span>
-                        <a href="/en" class="text-white font-bold underline">EN</a>
-                    {% elif page_url is starting_with('/en/newsletter') %}
-                        <a href="/newsletter" class="text-white hover:text-blue-200">DE</a>
-                        <span class="text-gray-400">|</span>
-                        <a href="/en/newsletter" class="text-white font-bold underline">EN</a>
-                    {% elif page_url is starting_with('/en/privacy') %}
-                        <a href="/privacy" class="text-white hover:text-blue-200">DE</a>
-                        <span class="text-gray-400">|</span>
-                        <a href="/en/privacy" class="text-white font-bold underline">EN</a>
-                    {% endif %}
+                    <a href="{{ page_url | replace(from='/en/', to='/') | replace(from='/en', to='/') }}" class="text-white hover:text-blue-200">DE</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="{{ page_url }}" class="text-white font-bold underline">EN</a>
                 {% else %}
-                    {% if page_url == '/' or page_url == '' %}
-                        <a href="/" class="text-white font-bold underline">DE</a>
-                        <span class="text-gray-400">|</span>
-                        <a href="/en" class="text-white hover:text-blue-200">EN</a>
-                    {% elif page_url is starting_with('/newsletter') %}
-                        <a href="/newsletter" class="text-white font-bold underline">DE</a>
-                        <span class="text-gray-400">|</span>
-                        <a href="/en/newsletter" class="text-white hover:text-blue-200">EN</a>
-                    {% elif page_url is starting_with('/privacy') %}
-                        <a href="/privacy" class="text-white font-bold underline">DE</a>
-                        <span class="text-gray-400">|</span>
-                        <a href="/en/privacy" class="text-white hover:text-blue-200">EN</a>
-                    {% endif %}
+                    <a href="{{ page_url }}" class="text-white font-bold underline">DE</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="/en{{ page_url }}" class="text-white hover:text-blue-200">EN</a>
                 {% endif %}
                 </span>
+                <!-- Hamburger button (mobile only) -->
+                <button id="nav-toggle" class="lg:hidden p-2 text-white hover:text-blue-200" aria-label="Menu" aria-expanded="false">
+                    <svg id="nav-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="nav-close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="nav-menu" class="hidden lg:hidden mt-4 pb-2 border-t border-blue-800 pt-4">
+            <div class="flex flex-col gap-3">
+                <a href="{{ prefix }}/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="conference", lang=lang) }}</a>
+                <a href="{{ prefix }}/archive/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="archive", lang=lang) }}</a>
+                <a href="{{ prefix }}/community/" class="text-white hover:text-blue-200 font-medium">{{ trans(key="community", lang=lang) }}</a>
+                <div class="flex items-center gap-3 pt-2 border-t border-blue-800">
+                    <a href="{{ prefix }}/newsletter" title="{{ trans(key="newsletter_tooltip", lang=lang) }}"
+                       class="px-1 text-white hover:text-blue-200">
+                           <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                             <path fill="currentColor" d="m 24,2 v 14 c 0,1.1 -0.9,2 -2,2 H 2 C 0.9,18 0,17.1 0,16 V 2 C 0,0.9 0.9,0 2,0 h 20 c 1.1,0 2,0.9 2,2 z M 22,2 H 2 V 2.01 L 12,9 22,2.01 Z m 0,14 V 4.99 L 12,11 2,4.99 V 16 Z" />
+                           </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/munich-embedded-conference" target="_blank"
+                       title="{{ trans(key="linkedin_tooltip", lang=lang) }}"
+                       class="px-1 text-white hover:text-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/munich-embedded/" target="_blank"
+                       title="{{ trans(key="github_tooltip", lang=lang) }}"
+                       class="px-1 text-white hover:text-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@MunichEmbedded" target="_blank"
+                       title="{{ trans(key="youtube_tooltip", lang=lang) }}"
+                       class="px-1 text-white hover:text-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <a href="https://matrix.to/#/#munich-embedded:matrix.org" target="_blank"
+                       title="{{ trans(key="matrix_tooltip", lang=lang) }}"
+                       class="px-1 text-white hover:text-blue-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.488.32.45.214.773.553.96 1.016.293-.39.674-.71 1.14-.96.468-.252.986-.376 1.564-.376.44 0 .842.06 1.205.18.364.12.676.31.94.567.26.254.46.566.6.935.14.37.21.81.21 1.32v5.42H15.88v-4.542c0-.268-.015-.53-.043-.78a1.59 1.59 0 00-.2-.644.98.98 0 00-.446-.428c-.196-.108-.47-.16-.82-.16-.35 0-.626.07-.828.21-.2.14-.357.312-.47.51-.114.2-.187.414-.22.643a4.725 4.725 0 00-.05.663v4.53h-1.56v-4.4c0-.237-.007-.467-.033-.696a1.813 1.813 0 00-.16-.636.99.99 0 00-.394-.468c-.18-.12-.444-.18-.79-.18-.11 0-.26.03-.45.09-.19.058-.37.17-.55.328-.18.16-.332.38-.46.656-.124.28-.187.64-.187 1.084v4.23H6.116V7.81zm15.693 15.64V.55H21.72V0H24v24h-2.28v-.55z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('nav-menu');
+            var openIcon = document.getElementById('nav-open-icon');
+            var closeIcon = document.getElementById('nav-close-icon');
+            var expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            menu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
 </header>
 {% endmacro navigation %}
 
 {% macro footer(page_url, lang) %}
+{% if page_url is starting_with('/en') %}
+    {% set_global footer_prefix = "/en" %}
+{% else %}
+    {% set_global footer_prefix = "" %}
+{% endif %}
 <footer class="bg-blue-900 text-white py-8 mt-auto">
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div>
-                <p>&copy; 2025 Munich Embedded. {{ trans(key="all_rights_reserved", lang=lang) }}</p>
+                <p>&copy; 2026 Munich Embedded. {{ trans(key="all_rights_reserved", lang=lang) }}</p>
             </div>
             <div class="mt-4 md:mt-0">
-                {% if page_url is starting_with('/en/') %}
-                    <a href="/en/newsletter" class="text-white hover:text-blue-200">{{ trans(key="newsletter", lang=lang) }}</a>
+                <a href="{{ footer_prefix }}/newsletter" class="text-white hover:text-blue-200">{{ trans(key="newsletter", lang=lang) }}</a>
+                {% if page_url is starting_with('/en') %}
                     <a href="https://www.systemscape.com/contact/" target="_blank" class="text-white hover:text-blue-200 mx-3">{{ trans(key="imprint", lang=lang) }}</a>
-                    <a href="/en/privacy" target="_blank" class="text-white hover:text-blue-200">{{ trans(key="privacy_policy", lang=lang) }}</a>
                 {% else %}
-                    <a href="/newsletter" class="text-white hover:text-blue-200">{{ trans(key="newsletter", lang=lang) }}</a>
                     <a href="https://www.systemscape.com/de/contact/" target="_blank" class="text-white hover:text-blue-200 mx-3">{{ trans(key="imprint", lang=lang) }}</a>
-                    <a href="/privacy" target="_blank" class="text-white hover:text-blue-200">{{ trans(key="privacy_policy", lang=lang) }}</a>
                 {% endif %}
+                <a href="{{ footer_prefix }}/privacy" target="_blank" class="text-white hover:text-blue-200">{{ trans(key="privacy_policy", lang=lang) }}</a>
             </div>
         </div>
     </div>
