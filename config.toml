@@ -26,6 +26,7 @@ all_rights_reserved = "All rights reserved"
 conference = "Conference"
 archive = "Archive"
 community = "Community"
+ecosystem = "Ecosystem"
 
 [translations]
 linkedin_tooltip = "Unserer LinkedIn Seite folgen"
@@ -40,6 +41,7 @@ all_rights_reserved = "Alle Rechte vorbehalten"
 conference = "Konferenz"
 archive = "Archiv"
 community = "Community"
+ecosystem = "Ökosystem"
 
 [markdown.highlighting]
 light_theme = "github-light-default"
