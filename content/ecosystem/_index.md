@@ -45,7 +45,7 @@ entities = [
 [[extra.groups]]
 title = "Meetups"
 entities = [
-    { name = "Zephyr Project Meetup", url = "https://www.meetup.com/zephyr-project-munich/", description = "Lokale Community für das Zephyr-RTOS-Projekt.", address = "Friedrich-Ludwig-Bauer-Straße 3, 85748 Garching bei München" , lat = 48.2650, lon = 11.6610 }
+    { name = "Zephyr Project Meetup", url = "https://www.zephyrproject.org/event/zephyr-project-meetup-november-20-2025-garching-munich-germany/", description = "Lokale Community für das Zephyr-RTOS-Projekt.", address = "Friedrich-Ludwig-Bauer-Straße 3, 85748 Garching bei München" , lat = 48.2650, lon = 11.6610 }
 ]
 +++
 
