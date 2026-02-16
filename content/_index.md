@@ -1,4 +1,4 @@
 +++
-title = "MEC2025"
+title = "Munich Embedded"
 aliases = ["de"]
 +++
