@@ -3,8 +3,8 @@
 {% block page_title %}{{ section.title }} - Munich Embedded{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="/vendor/leaflet/leaflet.css"/>
+<script src="/vendor/leaflet/leaflet.js"></script>
 
 <main class="grow bg-gray-100 py-16">
     <div class="container mx-auto px-4">
@@ -52,12 +52,17 @@
 </main>
 
 <script>
+    delete L.Icon.Default.prototype._getIconUrl;
+    L.Icon.Default.mergeOptions({
+        iconRetinaUrl: '/vendor/leaflet/marker-icon-2x.png',
+        iconUrl: '/vendor/leaflet/marker-icon.png',
+        shadowUrl: '/vendor/leaflet/marker-shadow.png',
+    });
     var map = L.map('map').setView([48.1351, 11.5820], 11); // Default to Munich center
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 20
+    L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
     }).addTo(map);
 
     var markers = [];
