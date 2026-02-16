@@ -7,12 +7,15 @@
 <script src="/vendor/leaflet/leaflet.js"></script>
 
 <main class="grow bg-gray-100 py-16">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto max-w-5xl px-4">
         <h1 class="text-3xl md:text-4xl font-bold text-center mb-12">{{ section.title }}</h1>
-        
-        <div class="max-w-5xl mx-auto mb-16 h-96 rounded-lg shadow-md z-0" id="map"></div>
+        <div>
+            {{ section.content | safe }}
+        </div>
 
-        <div class="max-w-5xl mx-auto space-y-16">
+        <div class="mx-auto mb-16 mt-8 h-96 rounded-lg shadow-md z-0" id="map"></div>
+
+        <div class="mx-auto space-y-16">
             {% for group in section.extra.groups %}
                 <section>
                     <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b border-gray-300 pb-2">{{ group.title }}</h2>
