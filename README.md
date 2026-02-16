@@ -15,6 +15,10 @@ It is a static website, built with Zola and hosted at Cloudflare pages.
 - If css was changed: rebuild with tailwind by running `just css`
 - Preview website locally with `zola serve`
 
+## Scripts
+
+- `./scripts/geocode.sh` — Resolves coordinates for ecosystem entities that have an `address` but no `lat`/`lon`. Uses OpenStreetMap Nominatim. Pass `-f` to re-geocode all entries. Requires `curl` and `jq`.
+
 ***
 Systemscape GmbH  | 2025\
 https://www.systemscape.com
