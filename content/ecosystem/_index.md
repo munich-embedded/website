@@ -27,7 +27,7 @@ entities = [
 title = "Beratung / Dienstleistung"
 entities = [
     { name = "DENX", url = "https://www.denx.de/", description = "Experten für Embedded Linux und U-Boot.", address = "Kirchenstr. 5, 82194 Gröbenzell" , lat = 48.1950, lon = 11.3730 },
-    { name = "Embedded Ocean (Xentara)", url = "https://embedded-ocean.com/", description = "Industrielle IoT-Lösungen und Xentara-Plattform.", address = "Steinerstr. 15, 81369 München" , lat = 48.1028, lon = 11.5371 },
+    { name = "Embedded Ocean (Xentara)", url = "https://xentara.io/", description = "Industrielle IoT-Lösungen und Xentara-Plattform.", address = "Steinerstr. 15, 81369 München" , lat = 48.1028, lon = 11.5371 },
     { name = "Ilbers", url = "https://ilbers.de/", description = "Beratung und Entwicklung für Embedded-Linux-Systeme.", address = "Maria-Merian-Str. 8, 85521 Ottobrunn" , lat = 48.0532, lon = 11.6570 },
     { name = "nabla", url = "https://nabladev.com/", description = "Engineering services for embedded systems.", address = "Hirschstr. 111a, 86156 Augsburg", lat = 48.3715, lon = 10.8985 },
     { name = "Systemscape", url = "https://www.systemscape.com/", description = "Rust für eingebettete Systeme.", address = "Bergmannstr. 12, 80339 München" , lat = 48.1387, lon = 11.5377 }
