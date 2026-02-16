@@ -8,7 +8,7 @@ entities = [
     { name = "Analog Devices", url = "https://www.analog.com", description = "Weltweit führender Halbleiterhersteller, der die physische und digitale Welt verbindet.", address = "Otl-Aicher-Straße 60-64, 80807 München" , lat = 48.1818, lon = 11.5872 },
     { name = "Apple", url = "https://www.apple.com", description = "Entwicklung und Herstellung von Unterhaltungselektronik, Software und Online-Diensten.", address = "Katharina-von-Bora-Straße 3, 80333 München" , lat = 48.1431, lon = 11.5649 },
     { name = "Google", url = "https://about.google/", description = "Organisiert die Informationen der Welt und macht sie allgemein zugänglich und nutzbar.", address = "Erika-Mann-Straße 33, 80636 München" , lat = 48.1429, lon = 11.5408 },
-    { name = "Intel", url = "https://www.intel.com", description = "Entwickelt Technologien, die das Leben jedes Menschen auf der Welt verbessern.", address = "Am Campeon 10-12, 85579 Neubiberg" , lat = 48.0811, lon = 11.6162 },
+    { name = "Intel", url = "https://www.intel.com", description = "Entwickelt Technologien, die das Leben jedes Menschen auf der Welt verbessern.", address = "Dornacher Str. 1, 85622 Feldkirchen", lat = 48.1485, lon = 11.7185 },
     { name = "Red Hat", url = "https://www.redhat.com", description = "Weltweit führender Anbieter von Enterprise-Open-Source-Lösungen.", address = "Werner-von-Siemens-Ring 12, 85630 Grasbrunn" , lat = 48.1012, lon = 11.7587 },
     { name = "Rohde & Schwarz", url = "https://www.rohde-schwarz.com", description = "Weltweit führend in Messtechnik, Broadcast, Cybersicherheit und Funkkommunikation.", address = "Mühldorfstraße 15, 81671 München" , lat = 48.1278, lon = 11.6127 }
 ]
