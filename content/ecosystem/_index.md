@@ -20,7 +20,6 @@ entities = [
     { name = "Codasip", url = "https://codasip.com/", description = "Führender Anbieter von RISC-V-Prozessor-IP.", address = "Paul-Gerhardt-Allee 50, 81245 München" , lat = 48.1539, lon = 11.4788 },
     { name = "Helsing", url = "https://helsing.ai/", description = "KI-Unternehmen für Verteidigung und nationale Sicherheit.", address = "Mühldorfstraße 8, 81671 München" , lat = 48.1280, lon = 11.6100 },
     { name = "Isar Aerospace", url = "https://www.isaraerospace.com/", description = "Flexibler und nachhaltiger Zugang zum Weltraum für kleine und mittlere Satelliten.", address = "Caroline-Herschel-Straße 2, 85521 Ottobrunn" , lat = 48.0527, lon = 11.6603 },
-    { name = "Tenstorrent", url = "https://tenstorrent.com/", description = "Entwickelt Computer für KI.", address = "Unterföhring", lat = 48.1917, lon = 11.6460 },
     { name = "Zerophase", url = "https://zerophase.de/", description = "Spezialisiert auf Embedded-Systeme und Softwareentwicklung.", address = "Max-Planck-Straße 5, 85716 Unterschleißheim" , lat = 48.2841, lon = 11.5671 }
 ]
 
