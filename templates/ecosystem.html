@@ -1,0 +1,91 @@
+{% extends "_base.html" %}
+
+{% block page_title %}{{ section.title }} - Munich Embedded{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/vendor/leaflet/leaflet.css"/>
+<script src="/vendor/leaflet/leaflet.js"></script>
+
+<main class="grow bg-gray-100 py-16">
+    <div class="container mx-auto max-w-5xl px-4">
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-12">{{ section.title }}</h1>
+        <div>
+            {{ section.content | safe }}
+        </div>
+
+        <div class="mx-auto mb-16 mt-8 h-96 rounded-lg shadow-md z-0" id="map"></div>
+
+        <div class="mx-auto space-y-16">
+            {% for group in section.extra.groups %}
+                <section>
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b border-gray-300 pb-2">{{ group.title }}</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {% for entity in group.entities %}
+                            <a href="{{ entity.url }}" target="_blank" class="block group h-full">
+                                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col border border-gray-200">
+                                    <h3 class="text-xl font-semibold mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">{{ entity.name }}</h3>
+                                    <p class="text-gray-600 text-sm flex-grow">{{ entity.description }}</p>
+                                    {% if entity.address %}
+                                        <div class="mt-4 flex items-start gap-2 text-gray-500 text-xs">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg>
+                                            <span>{{ entity.address }}</span>
+                                        </div>
+                                    {% endif %}
+                                    <div class="mt-4 text-blue-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+                                        <span>
+                                            {% if current_path is starting_with('/en') %}
+                                                Visit Website
+                                            {% else %}
+                                                Webseite besuchen
+                                            {% endif %}
+                                        </span>
+                                        <span>&rarr;</span>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+
+<script>
+    delete L.Icon.Default.prototype._getIconUrl;
+    L.Icon.Default.mergeOptions({
+        iconRetinaUrl: '/vendor/leaflet/marker-icon-2x.png',
+        iconUrl: '/vendor/leaflet/marker-icon.png',
+        shadowUrl: '/vendor/leaflet/marker-shadow.png',
+    });
+    var map = L.map('map').setView([48.1351, 11.5820], 11); // Default to Munich center
+
+    L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
+    }).addTo(map);
+
+    var markers = [];
+    {% for group in section.extra.groups %}
+        {% for entity in group.entities %}
+            {% if entity.lat and entity.lon %}
+                var marker = L.marker([{{ entity.lat }}, {{ entity.lon }}]).addTo(map);
+                var popupContent = "<b>{{ entity.name }}</b>";
+                {% if entity.address %}
+                    popupContent += "<br>{{ entity.address }}";
+                {% endif %}
+                marker.bindPopup(popupContent);
+                markers.push(marker);
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    if (markers.length > 0) {
+        var group = new L.featureGroup(markers);
+        map.fitBounds(group.getBounds().pad(0.1));
+    }
+</script>
+{% endblock %}

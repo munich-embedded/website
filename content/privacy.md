@@ -50,6 +50,12 @@ Die Verarbeitung der in diesem Abschnitt genannten Daten ist weder gesetzlich no
 
 Cloudflare hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle weltweiten Aktivitäten, bei denen Cloudflare personenbezogene Daten von natürlichen Personen in der EU verarbeitet. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs) und der Teilnahme am EU-US Data Privacy Framework. Weitere Informationen finden Sie unter: [https://www.cloudflare.com/cloudflare_customer_SCCs.pdf](https://www.cloudflare.com/cloudflare_customer_SCCs.pdf)
 
+## Kartendarstellung mit OpenStreetMap
+
+Auf unserer Ökosystem-Seite verwenden wir eine interaktive Karte, die Kartenkacheln vom deutschen OpenStreetMap-Tileserver (`tile.openstreetmap.de`) lädt. Dieser wird vom FOSSGIS e.V. (ein eingetragener Verein mit Sitz in Deutschland) betrieben. Beim Laden der Kartenkacheln wird Ihre IP-Adresse an die Server des FOSSGIS e.V. übermittelt. Es findet keine Datenübermittlung in Drittländer statt.
+
+Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses gem. Art. 6 Abs. 1 lit. f DSGVO an einer ansprechenden Darstellung der Standorte auf unserer Website. Weitere Informationen zum Datenschutz des FOSSGIS e.V. finden Sie unter: [https://www.fossgis.de/datenschutzerkl%C3%A4rung](https://www.fossgis.de/datenschutzerkl%C3%A4rung)
+
 ## Ihre Rechte als betroffene Person
 
 Als betroffene Person haben Sie das Recht auf Auskunft, das Recht auf Berichtigung oder Löschung, das Recht auf Einschränkung der Verarbeitung und das Recht auf Widerspruch gegen die Verarbeitung Ihrer Daten. Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.
