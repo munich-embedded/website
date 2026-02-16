@@ -50,6 +50,12 @@ The processing of the data specified in this section is neither legally nor cont
 
 Cloudflare has implemented compliance measures for international data transfers. These apply to all worldwide activities where Cloudflare processes personal data of natural persons in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs) and participation in the EU-US Data Privacy Framework. For more information, visit: [https://www.cloudflare.com/cloudflare_customer_SCCs.pdf](https://www.cloudflare.com/cloudflare_customer_SCCs.pdf)
 
+## Map Display with OpenStreetMap
+
+On our ecosystem page, we use an interactive map that loads map tiles from the German OpenStreetMap tile server (`tile.openstreetmap.de`). This server is operated by FOSSGIS e.V. (a registered association based in Germany). When loading the map tiles, your IP address is transmitted to the servers of FOSSGIS e.V. No data transfer to third countries takes place.
+
+The use is based on our legitimate interest pursuant to Art. 6(1)(f) GDPR in providing an appealing presentation of locations on our website. Further information on the data protection of FOSSGIS e.V. can be found at: [https://www.fossgis.de/datenschutzerkl%C3%A4rung](https://www.fossgis.de/datenschutzerkl%C3%A4rung)
+
 ## Your Rights as a Data Subject
 
 As a data subject, you have the right to information, the right to rectification or erasure, the right to restriction of processing, and the right to object to the processing of your data. If you have given us consent, you can revoke it at any time with effect for the future.
