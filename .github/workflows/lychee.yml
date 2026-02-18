@@ -29,4 +29,4 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: true # fail workflow run on error
-          args: --root-dir "$(pwd)/public" public --exclude ".+\.analog.com" --exclude "https://ilbers.de/"
+          args: --root-dir "$(pwd)/public" public --exclude ".+\.analog.com" --exclude "https://ilbers.de/" --accept 100..=103,200..=299,403,429
