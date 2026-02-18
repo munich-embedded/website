@@ -13,14 +13,14 @@ Im Folgenden möchten wir Sie darüber informieren, wie wir mit Ihren Daten umge
 Systemscape GmbH\
 Bergmannstr. 12\
 80339 München\
-E-Mail: {{ email(email="contact@systemscape.de") }}
+E-Mail: {{ email(email="munich-embedded@systemscape.de") }}
 
 **Datenschutzbeauftragter:**\
 Joel Schulz-Andres\
 c/o Systemscape GmbH\
 Bergmannstr. 12\
 80339 München\
-E-Mail: {{ email(email="contact@systemscape.de") }}
+E-Mail: {{ email(email="munich-embedded@systemscape.de") }}
 
 ## Hosting und Content Delivery Network (CDN)
 

@@ -13,14 +13,14 @@ In the following, we would like to inform you about how we process your data.
 Systemscape GmbH\
 Bergmannstr. 12\
 80339 München\
-E-Mail: {{ email(email="contact@systemscape.de") }}
+E-Mail: {{ email(email="munich-embedded@systemscape.de") }}
 
 **Data Protection Officer:**\
 Joel Schulz-Andres\
 c/o Systemscape GmbH\
 Bergmannstr. 12\
 80339 München\
-E-Mail: {{ email(email="contact@systemscape.de") }}
+E-Mail: {{ email(email="munich-embedded@systemscape.de") }}
 
 ## Hosting and Content Delivery Network (CDN)
 
