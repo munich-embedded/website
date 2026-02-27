@@ -15,5 +15,5 @@ build:
 
 lychee:
     @just build
-    @lychee --root-dir public public --exclude ".+\.analog.com" --exclude "https://ilbers.de/" --accept 100..=103,200..=299,403,429
+    @lychee --root-dir public public --exclude ".+\.analog.com" --accept 100..=103,200..=299,403,429
     @rm -r public
