@@ -266,6 +266,9 @@
       max-width: 96rem;
     }
   }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
+  }
   .mx-3 {
     margin-inline: calc(var(--spacing) * 3);
   }
@@ -397,6 +400,9 @@
   .h-full {
     height: 100%;
   }
+  .max-h-32 {
+    max-height: calc(var(--spacing) * 32);
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -429,6 +435,9 @@
   }
   .max-w-6xl {
     max-width: var(--container-6xl);
+  }
+  .max-w-90 {
+    max-width: calc(var(--spacing) * 90);
   }
   .min-w-full {
     min-width: 100%;
