@@ -1,0 +1,40 @@
+pnpm-lock.yaml
+  ai_agent 1-36
+.prettierignore
+  s_ff22f7a78ddfef::t_f4b0a3787b81fd 1-3
+README.md
+  s_ff22f7a78ddfef::t_ef9eb1c8bd7e95 12,19-32
+package.json
+  s_ff22f7a78ddfef::t_1390a56386bef1 6
+  s_ff22f7a78ddfef::t_1f1cdb940c67ee 1-3,5,7-9
+  s_ff22f7a78ddfef::t_6a4d04d36738ff 4
+.prettierrc.json
+  s_ff22f7a78ddfef::t_93222e46a755d4 1-2,4-14
+  s_ff22f7a78ddfef::t_ca25cc9621a7dd 3
+justfile
+  s_ff22f7a78ddfef::t_f96638f2ddcc0c 28,31-33,35-36
+  s_ff22f7a78ddfef::t_67fef1835c092b 1,5,9,13,17,21-23,29-30,34
+templates/ecosystem.html
+  s_ff22f7a78ddfef::t_b1e12b90a78b1d 57
+  s_ff22f7a78ddfef::t_5546df54fe8595 92
+.gitignore
+  s_ff22f7a78ddfef::t_27a235a0ae6ebd 1-2
+templates/community.html
+  s_ff22f7a78ddfef::t_6d9aced4bf5edc 72
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "7b24a0561bab9e2fe460dab7284df5e70fb69dc6",
+  "prompts": {},
+  "sessions": {
+    "s_ff22f7a78ddfef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1fb9b2ef-ce1f-46f8-95bd-189e93afdf4f",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
