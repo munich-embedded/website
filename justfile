@@ -1,8 +1,8 @@
-# List all available recipes (default when running `just` with no args)
+# List all available recipes
 default:
     @just --list
 
-# Rebuild the Tailwind stylesheet on every change to the input CSS or templates
+# Rebuild Tailwind CSS on every change to the input CSS or templates
 watch:
     @tailwindcss -i static/css/_style.css -o static/css/style.css --watch
 
@@ -10,7 +10,7 @@ watch:
 css:
     @tailwindcss -i static/css/_style.css -o static/css/style.css
 
-# Build CSS, then run the local Zola dev server (live reload on http://127.0.0.1:1111)
+# Build CSS then run the Zola dev server (live reload on http://127.0.0.1:1111)
 serve: css
     @zola serve
 
@@ -18,20 +18,18 @@ serve: css
 build:
     @zola build
 
-# Build the site and run the lychee link checker against the generated `public/`,
-# excluding analog.com (which rate-limits/blocks bots) and tolerating a few
-# common non-2xx responses. Cleans up `public/` afterwards.
+# Excludes analog.com (rate-limits bots); tolerates 100/103/403/429; deletes `public/` after.
+# Build the site and run the lychee link checker against the generated `public/`
 lychee:
     @just build
     @lychee --root-dir public public --exclude ".+\.analog.com" --accept 100..=103,200..=299,403,429
     @rm -r public
 
-# Format Tera templates with djlint (`brew install djlint`). Settings are read
-# from .djlintrc (jinja profile, indent 4, max_line_length 160).
-# djlint exits 1 when it rewrites files, which isn't an error for `just format`.
+# djlint --reformat exits 1 on every rewrite, so swallow that here only.
+# Format Tera templates with djlint (config in .djlintrc; `brew install djlint`)
 format:
     @djlint templates --reformat || true
 
-# Check formatting without modifying files. Use this in CI or before committing.
+# Check template formatting without writing — used in CI / pre-commit
 format-check:
     @djlint templates --check
