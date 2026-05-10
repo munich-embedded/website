@@ -1,0 +1,19 @@
+justfile
+  s_ff22f7a78ddfef::t_34334913a95635 31,33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "19dce4efa7846983c787aef7568adfc9fd4278f9",
+  "prompts": {},
+  "sessions": {
+    "s_ff22f7a78ddfef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1fb9b2ef-ce1f-46f8-95bd-189e93afdf4f",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
