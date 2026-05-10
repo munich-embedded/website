@@ -1,0 +1,25 @@
+justfile
+  s_ff22f7a78ddfef::t_df5fd43d304476 1,5,9,13,17,21-23,28-36
+.gitignore
+  s_ff22f7a78ddfef::t_abfeed8af990b2 1
+README.md
+  s_ff22f7a78ddfef::t_e457ce156c9663 12,19-27
+.djlintrc
+  s_ff22f7a78ddfef::t_d8103a19fa919c 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "6309db2994f431d3a81727c30dcd90fd571b92fc",
+  "prompts": {},
+  "sessions": {
+    "s_ff22f7a78ddfef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1fb9b2ef-ce1f-46f8-95bd-189e93afdf4f",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
