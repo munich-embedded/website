@@ -28,8 +28,9 @@ lychee:
 
 # Format Tera templates with djlint (`brew install djlint`). Settings are read
 # from .djlintrc (jinja profile, indent 4, max_line_length 160).
+# djlint exits 1 when it rewrites files, which isn't an error for `just format`.
 format:
-    @djlint templates --reformat
+    @djlint templates --reformat || true
 
 # Check formatting without modifying files. Use this in CI or before committing.
 format-check:
