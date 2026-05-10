@@ -5,7 +5,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block page_title %}Munich Embedded{% endblock %}</title>
+        <title>
+            {% block page_title %}Munich Embedded{% endblock %}
+        </title>
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
@@ -48,10 +50,9 @@
     </head>
 
     <body class="min-h-screen flex flex-col text-black">
-        {{ macros::navigation(page_url=current_path, page_title=page.title | default(value=section.title), lang=lang) }}
+        {{ macros::navigation(page_url=current_path, page_title=page.title | default(value=section.title) , lang=lang) }}
 
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
 
         {{ macros::footer(page_url=current_path, lang=lang) }}
     </body>
