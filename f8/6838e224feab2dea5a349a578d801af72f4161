@@ -1,0 +1,45 @@
+templates/shortcodes/email.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 2
+templates/archive_2025_en.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 14,28,33,38,43,48,53,64-66,79-84,88-93,104-109,113-118,129-137,141-148,159-167,171-176,187-197,201-211,228-232,240-244,252-256,264-268,276-280,288-292,300-304,312-316
+templates/index_en.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 4-5,7,9,11-13,15-16,18,20-23,25-29,31-33,37-40,42,44-45,47-60,62-65,67-68,70-72,74,76,78,80-81,85-100,103,105-106,110-116,120-168,171-173,175-176,178,180-186,254-257,259-260,262,264-265,267-271,273,275-276,278,280-287,289-301,303-317,319-320,322-324,326,328-329,331,333,335-342,344-348,352-353
+templates/shortcodes/raw.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 1
+templates/ecosystem.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 6-7,9-12,14,16-43,46-51,53,55,88
+templates/community.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 10-12,14-16,23,37,65,77-79,81-93,95-96
+templates/_macros.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 2-4,8-10,14-32,34-80,82-84,86,89-122,125-126,137-138,142-161,164
+templates/archive_2025.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 14,38,43,48,53,64-66,79-84,88-93,104-109,113-118,129-137,141-148,159-167,171-176,187-197,201-211,228-232,240-244,252-256,264-268,276-280,288-292,300-304,312-316
+templates/archive.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 11-17,19-22,24
+templates/index.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 12,17,23,38-40,42-50,52-57,240-242,253-257,265-269,277-283,296-300
+templates/newsletter.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 7
+templates/page.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 9
+templates/_base.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 8-10,53,55
+templates/shortcodes/iframe.html
+  s_ff22f7a78ddfef::t_8259b9ae7b1c52 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "f86838e224feab2dea5a349a578d801af72f4161",
+  "prompts": {},
+  "sessions": {
+    "s_ff22f7a78ddfef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1fb9b2ef-ce1f-46f8-95bd-189e93afdf4f",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
