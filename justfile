@@ -28,7 +28,7 @@ lychee:
 # djlint --reformat exits 1 on every rewrite, so swallow that here only.
 # Format Tera templates with djlint (config in .djlintrc; `brew install djlint`)
 format:
-    @djlint templates --reformat || true
+    @djlint templates --reformat || [ $$? -eq 1 ]
 
 # Check template formatting without writing — used in CI / pre-commit
 format-check:
