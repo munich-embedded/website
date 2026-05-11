@@ -4,8 +4,6 @@
 
 {% block content %}
     <main class="grow">
-        <div class="newsletter-content bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-            {{ page.content | safe }}
-        </div>
+        <div class="newsletter-content bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">{{ page.content | safe }}</div>
     </main>
 {% endblock %}
