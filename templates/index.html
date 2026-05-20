@@ -126,9 +126,37 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="py-3 px-4 whitespace-nowrap">16:45 – 19:15</td>
+                                <td class="py-3 px-4 whitespace-nowrap">16:45 – 17:00</td>
                                 <td class="py-3 px-4">
-                                    <b>Vorträge (inkl. Pause)</b>
+                                    <b>Lightning Talk:</b> <a href="#lightning-talk-1">Josef Holzmayr – The three deadly pins</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 whitespace-nowrap">17:00 – 17:30</td>
+                                <td class="py-3 px-4">
+                                    <b>Technical Talk:</b> <a href="#talk-1">Ozan Durgut – Stop Hacking Hardware Test Scripts — Hack on Hardware with Friends</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 whitespace-nowrap">17:30 – 17:45</td>
+                                <td class="py-3 px-4">
+                                    <b>Lightning Talk:</b> <a href="#lightning-talk-2">Thomas Leyrer – HIL Simulation Simplified</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 whitespace-nowrap">17:45 – 18:15</td>
+                                <td class="py-3 px-4">Pause</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 whitespace-nowrap">18:15 – 18:45</td>
+                                <td class="py-3 px-4">
+                                    <b>Technical Talk:</b> <a href="#talk-2">Claudius Jordan – Co-simulation of µC software and electric circuits for functional safety</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 whitespace-nowrap">18:45 – 19:15</td>
+                                <td class="py-3 px-4">
+                                    <b>Technical Talk:</b> <a href="#talk-3">Robert Jeutter – Why Medical Devices Are So Hard</a>
                                 </td>
                             </tr>
                             <tr>
@@ -153,81 +181,158 @@
         <section class="py-16 bg-gray-100" id="talks">
             <div class="container mx-auto px-4">
                 <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Vorträge (auf Englisch)</h2>
-                <div class="highlighted-grid-element max-w-3xl mx-auto text-center">
-                    <p class="text-gray-700 text-lg mb-4">
-                        Wir planen <strong>2 Lightning Talks (10 min)</strong> und <strong>3 technische Vorträge (25 min)</strong> für die diesjährige Konferenz.
-                        Die Auswahl der Speaker erfolgte über unseren Call for Proposals bis zum <b>30. April 2026</b>.
-                        Das finale Programm wird hier zeitnah bekanntgegeben.
-                    </p>
-                </div>
-                <!--
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!- - Lightning Talk 1 - ->
+                    <!-- Lightning Talk 1 -->
                     <div class="highlighted-grid-element bg-white" id="lightning-talk-1">
                         <div class="text-center mb-4">
-                            <img src="/speakers/placeholder-speaker.svg" loading="lazy" alt="Speaker" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-                            <h3 class="text-lg font-bold mb-2">TBD</h3>
+                            <img src="/speakers/holzmayr.png" loading="lazy" alt="Picture of Josef Holzmayr" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                            <h3 class="text-lg font-bold mb-2">The three deadly pins</h3>
                             <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-sm font-medium">Lightning Talk (10 min)</span>
                         </div>
                         <div class="mb-4">
-                            <h4 class="font-bold text-gray-800 mb-2">TBD</h4>
-                            <p class="text-gray-700 text-sm">TBD</p>
+                            <h4 class="font-bold text-gray-800 mb-2">
+                                Josef Holzmayr (<a target="_blank" href="https://northern.tech/">Northern.tech</a>)
+                            </h4>
+                            <p class="text-gray-700 text-sm">
+                                Josef has been active for more than 15 years as a "Complete"-Stack developer for industrial controls by now. He's done everything from debugging hardware to writing drivers, from application development to web front ends.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                A passion for showing, telling, and teaching people in both entertaining and engaging ways led Josef to Mender.io. Here, he tries to make the world better and more secure by enabling OTA updates for as many devices as possible.
+                            </p>
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-800 mb-2">Abstract</h4>
-                            <p class="text-gray-700 text-sm">TBD</p>
+                            <p class="text-gray-700 text-sm">
+                                Ground, TX, RX. Three UART pins, a two-dollar serial adapter, and a live U-Boot prompt — and the secure boot chain you spent months designing stops being a chain.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                This talk walks through what actually happens at that prompt on a shipped device: rewriting bootargs to land a root shell, sideloading an unsigned kernel, dumping flash, pulling secrets out of RAM. None of it is novel. All of it still works on hardware being manufactured today.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                Then the uncomfortable part: the mitigations most teams believe in don't hold up. <code>bootdelay=0</code> is not a defense. A depopulated header is not a defense. <code>CONFIG_AUTOBOOT_KEYED</code> has footguns. Signing the kernel means little when the environment deciding which kernel to boot sits outside the chain of trust. We'll go through the short list of things that genuinely lock U-Boot down for production, and the longer list of reasons teams skip them anyway.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                If you ship connected hardware and you've never attacked one of your own devices with a serial cable, you should. Someone else already has.
+                            </p>
                         </div>
                     </div>
-                    <!- - Talk 1 - ->
+                    <!-- Talk 1 -->
                     <div class="highlighted-grid-element bg-white" id="talk-1">
                         <div class="text-center mb-4">
-                            <img src="/speakers/placeholder-speaker.svg" loading="lazy" alt="Speaker" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-                            <h3 class="text-lg font-bold mb-2">TBD</h3>
+                            <img src="/speakers/durgut.jpg" loading="lazy" alt="Picture of Ozan Durgut" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                            <h3 class="text-lg font-bold mb-2">Stop Hacking Hardware Test Scripts—Hack on Hardware with Friends</h3>
                             <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm font-medium">Technical Talk (25 min)</span>
                         </div>
                         <div class="mb-4">
-                            <h4 class="font-bold text-gray-800 mb-2">TBD</h4>
-                            <p class="text-gray-700 text-sm">TBD</p>
+                            <h4 class="font-bold text-gray-800 mb-2">Ozan Durgut</h4>
+                            <p class="text-gray-700 text-sm">
+                                Ozan Durgut is an Embedded Linux Engineer at Analog Devices and a master's student at TUM. His work includes open-source contributions to embedded systems and low-level software, particularly in Linux-based platforms. He has authored multiple publications in computer vision and embedded AI, and co-authored books on embedded image processing with microcontrollers. He received the IEEE Young Researchers Best Paper Award in 2024.
+                            </p>
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-800 mb-2">Abstract</h4>
-                            <p class="text-gray-700 text-sm">TBD</p>
+                            <p class="text-gray-700 text-sm">
+                                Test automation in embedded systems is often limited by physical hardware access. Teams build custom setups that work locally but do not scale, leading to fragmented workflows and duplicated effort.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                We present a unified approach based on Labgrid, developed for a large-scale board farm at Analog Devices. The system connects hundreds of devices across locations and exposes them through a single interface. Hardware remains local but becomes globally accessible, allowing engineers and automated agents to interact with real targets as if they were on their desk. The key idea is to treat hardware as a shared, schedulable resource, enabling collaborative development, reproducible testing, and CI/CD integration.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                Built on and contributing to the open-source Labgrid ecosystem, our approach emphasizes extensibility and collaborative development. We also explore how AI-driven agents can directly access and operate real hardware to debug issues and assist development. We share practical lessons and demonstrate how testing can evolve from isolated setups to scalable, and open infrastructure.
+                            </p>
                         </div>
                     </div>
-                    <!- - Lightning Talk 2 - ->
+                    <!-- Lightning Talk 2 -->
                     <div class="highlighted-grid-element bg-white" id="lightning-talk-2">
                         <div class="text-center mb-4">
-                            <img src="/speakers/placeholder-speaker.svg" loading="lazy" alt="Speaker" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-                            <h3 class="text-lg font-bold mb-2">TBD</h3>
+                            <img src="/speakers/leyrer.jpg" loading="lazy" alt="Picture of Thomas Leyrer" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                            <h3 class="text-lg font-bold mb-2">
+                                HIL Simulation Simplified: AI-Generated Open Source Tools and Standard Hardware for Faster Real-time Embedded Development
+                            </h3>
                             <span class="inline-block bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-sm font-medium">Lightning Talk (10 min)</span>
                         </div>
                         <div class="mb-4">
-                            <h4 class="font-bold text-gray-800 mb-2">TBD</h4>
-                            <p class="text-gray-700 text-sm">TBD</p>
+                            <h4 class="font-bold text-gray-800 mb-2">
+                                Thomas Leyrer (<a target="_blank" href="https://www.ti.com/">Texas Instruments</a>)
+                            </h4>
+                            <p class="text-gray-700 text-sm">
+                                Thomas Leyrer is System Architect of TI's Industrial Communication and Control solutions. He is responsible to develop solutions for Industrial Automation market including Fieldbus and Industrial Ethernet on TI Microcontroller.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                Thomas has more than 30 years experience with TI's Semiconductor Group. He held several engineering and application manager positions for Computer, Automotive, Broadband Communication and Industrial Automation market. He is an advocate of Linux Open Source and system architect for industrial communication and control on ARM SoCs. Thomas holds an Engineering degree in Electrical Engineering from FH Landshut.
+                            </p>
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-800 mb-2">Abstract</h4>
-                            <p class="text-gray-700 text-sm">TBD</p>
+                            <p class="text-gray-700 text-sm">
+                                Hardware-in-the-Loop (HIL) simulation is a proven method for validating embedded electronics in demanding environments — from high-power systems and battery management to robotics and industrial controls. Traditional HIL setups depend on FPGA-based platforms and proprietary toolchains. The associated licensing costs, specialized expertise requirements, and long integration cycles create significant barriers to broader adoption.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                This session presents an alternative architecture that achieves real-time embedded testing fidelity using standard microcontrollers, open source firmware, and AI-assisted toolchain generation. Rather than replacing simulation rigor, the approach redefines where complexity lives: AI code generation handles the labor-intensive creation of plant models, hardware abstraction layers, and communication interfaces, while standard microcontroller hardware provides the real-time execution substrate. A live motor control demonstration will showcase the complete workflow — from plant model simulation to real-time embedded testing — illustrating how this approach delivers results comparable to traditional HIL systems at a fraction of the cost and complexity.
+                            </p>
                         </div>
                     </div>
-                    <!- - Talk 2 - ->
+                    <!-- Talk 2 -->
                     <div class="highlighted-grid-element bg-white" id="talk-2">
                         <div class="text-center mb-4">
-                            <img src="/speakers/placeholder-speaker.svg" loading="lazy" alt="Speaker" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-                            <h3 class="text-lg font-bold mb-2">TBD</h3>
+                            <img src="/speakers/jordan.jpg" loading="lazy" alt="Picture of Claudius Jordan" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                            <h3 class="text-lg font-bold mb-2">Co-simulation of µC software and electric circuits for seamless automated functional safety workstreams</h3>
                             <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm font-medium">Technical Talk (25 min)</span>
                         </div>
                         <div class="mb-4">
-                            <h4 class="font-bold text-gray-800 mb-2">TBD</h4>
-                            <p class="text-gray-700 text-sm">TBD</p>
+                            <h4 class="font-bold text-gray-800 mb-2">
+                                Claudius Jordan (<a target="_blank" href="https://modelwise.ai/">Modelwise</a>)
+                            </h4>
+                            <p class="text-gray-700 text-sm">
+                                As Senior System Engineer at Modelwise, Claudius Jordan oversees research projects and strategic collaborations, drawing on his strong background in mechatronics and automated failure diagnosis for automotive test environments — expertise he honed during his academic research at the Technical University of Munich (TUM). With a blend of technical insight and project management experience, he drives user-focused product development and innovation at Modelwise.
+                            </p>
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-800 mb-2">Abstract</h4>
-                            <p class="text-gray-700 text-sm">TBD</p>
+                            <p class="text-gray-700 text-sm">
+                                Functional safety has traditionally been the domain of electronic hardware engineers. However, as safety-critical systems rely more and more on software, a new challenge emerges: how do we ensure functional safety when the boundary between hardware and software becomes blurred?
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                This talk presents a practical approach using co-simulation of microcontrollers and analog electrical circuitry to bridge this gap. The presentation covers:
+                            </p>
+                            <ul class="text-gray-700 text-sm list-disc pl-5 mb-2">
+                                <li>setting up a co-simulation linking microcontroller code with SPICE-based analog circuit models and</li>
+                                <li>performing automated Failure Modes, Effects, and Diagnostic Analysis (FMEDA) across the hardware-software boundary</li>
+                            </ul>
+                            <p class="text-gray-700 text-sm">
+                                Attendees will leave with actionable insights on implementing co-simulation in their development process, enabling functional safety engineers to address safety concerns holistically rather than treating hardware and software as separate silos. This approach reduces late-stage safety validation failures and accelerates certification processes.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Talk 3 -->
+                    <div class="highlighted-grid-element bg-white md:col-span-2 md:max-w-2xl md:mx-auto" id="talk-3">
+                        <div class="text-center mb-4">
+                            <img src="/speakers/jeutter.jpg" loading="lazy" alt="Picture of Robert Jeutter" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                            <h3 class="text-lg font-bold mb-2">Why Medical Devices Are So Hard: A Developer's Perspective</h3>
+                            <span class="inline-block bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm font-medium">Technical Talk (25 min)</span>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-bold text-gray-800 mb-2">
+                                Robert Jeutter (<a target="_blank" href="https://corpuls.world/">Corpuls</a>)
+                            </h4>
+                            <p class="text-gray-700 text-sm">
+                                Embedded developer and software architect working on safety-critical medical technology at Corpuls. Robert builds life-supporting and embedded systems in Rust and C, with a strong focus on reliability, architecture, and maintainability. Previously he worked as an independent software engineer across web and industrial projects. He also speaks at CCC, Hackerkiste and robotics events, and is an iSAQB certified Advanced Software Architect.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">Abstract</h4>
+                            <p class="text-gray-700 text-sm">
+                                Medical devices often look slow, over-engineered, and unnecessarily hard to change — especially from the perspective of developers used to fast-moving IT or typical embedded projects.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                After moving into medical embedded software, I learned that this complexity is not accidental. It is the result of systems that must remain safe, analyzable, testable, and maintainable over very long life-cycles, while operating under large regulatory and certification constraints that reach deep into the architecture and implementation.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                In this talk, I offer a compact developer's perspective on what makes medical devices fundamentally different from other devices. Using concrete examples from everyday engineering work, I show why small design choices can have long-term consequences, why "simple changes" are often not simple at all, and why familiar instincts from other domains sometimes fail in regulated environments.
+                            </p>
                         </div>
                     </div>
                 </div>
-                -->
             </div>
         </section>
         <!-- Sponsors Section -->
