@@ -1,0 +1,25 @@
+templates/index_en.html
+  s_cce0b3c3f92e6b::t_6e3efcb184d0dc 241-247,252
+  s_cce0b3c3f92e6b::t_014b3bd07d3496 248-251,253
+  s_cce0b3c3f92e6b::t_002c0af6dfa509 254
+templates/index.html
+  s_cce0b3c3f92e6b::t_c98eb74e2fa8fa 228-231,233
+  s_cce0b3c3f92e6b::t_ff307f090b68a8 221-227,232
+  s_cce0b3c3f92e6b::t_eb845f9094994b 234
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "a9268fdf64982112eb38ddfb0fd1b74c3ec3cc40",
+  "prompts": {},
+  "sessions": {
+    "s_cce0b3c3f92e6b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "743be565-8d07-40bf-8889-6b07b84112ca",
+        "model": "claude-opus-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
