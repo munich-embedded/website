@@ -1,0 +1,24 @@
+templates/index.html
+  s_63550726fae99d::t_f376789a3737d3 152,156-157,162-163,166-167,172-173,178-179,184-185,190-191,194-195,200-201,206-207,210-211
+static/css/style.css
+  s_63550726fae99d::t_6177836f9eb9e1 937-939,952-957,970-972
+templates/index_en.html
+  s_63550726fae99d::t_6177836f9eb9e1 180,184,190,196,202,208,212,218,224,228
+  s_63550726fae99d::t_f376789a3737d3 170,174-175,181,185,191,197,203,209,213,219,225,229
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "025b9c98fb47bedd90d25837093dbf0ee090ddfb",
+  "prompts": {},
+  "sessions": {
+    "s_63550726fae99d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7a4157a4-288a-43df-87dc-0ed27e957e61",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
