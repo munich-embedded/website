@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="/vendor/leaflet/leaflet.css" />
     <script src="/vendor/leaflet/leaflet.js"></script>
 
-    <main class="grow bg-gray-100 py-16">
+    <main class="grow bg-gray-100 py-8 md:py-16">
         <div class="container mx-auto max-w-5xl px-4">
             <h1 class="text-3xl md:text-4xl font-bold text-center mb-12">{{ section.title }}</h1>
             <div>{{ section.content | safe }}</div>
 
-            <div class="mx-auto mb-16 mt-8 h-96 rounded-lg shadow-md z-0" id="map"></div>
+            <div class="mx-auto mb-8 md:mb-16 mt-4 md:mt-8 h-96 rounded-lg shadow-md z-0" id="map"></div>
 
             <div class="mx-auto space-y-16">
                 {% for group in section.extra.groups %}
