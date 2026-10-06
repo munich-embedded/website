@@ -21,17 +21,19 @@
                         {{ <social_links prefix={prefix} lang={lang} /> }}
                     </div>
                     <!-- Language toggle -->
-                    <span class="pl-2">
+                    <div class="pl-2 flex flex-col sm:flex-row items-center sm:gap-1">
                         {% if page_url is starting_with(pat='/en') %}
-                            <a href="{{ page_url | replace(from='/en/', to='/') | replace(from='/en', to='/') }}" class="text-white hover:text-blue-200">DE</a>
-                            <span class="text-gray-400">|</span>
-                            <a href="{{ page_url }}" class="text-white font-bold underline">EN</a>
+                            <a href="{{ page_url | replace(from='/en/', to='/') | replace(from='/en', to='/') }}" class="py-1.5 sm:py-0 text-white hover:text-blue-200">DE</a>
+                            <span class="w-5 border-t border-gray-400 sm:hidden" aria-hidden="true"></span>
+                            <span class="hidden sm:inline text-gray-400">|</span>
+                            <a href="{{ page_url }}" class="py-1.5 sm:py-0 text-white font-bold underline">EN</a>
                         {% else %}
-                            <a href="{{ page_url }}" class="text-white font-bold underline">DE</a>
-                            <span class="text-gray-400">|</span>
-                            <a href="/en{{ page_url }}" class="text-white hover:text-blue-200">EN</a>
+                            <a href="{{ page_url }}" class="py-1.5 sm:py-0 text-white font-bold underline">DE</a>
+                            <span class="w-5 border-t border-gray-400 sm:hidden" aria-hidden="true"></span>
+                            <span class="hidden sm:inline text-gray-400">|</span>
+                            <a href="/en{{ page_url }}" class="py-1.5 sm:py-0 text-white hover:text-blue-200">EN</a>
                         {% endif %}
-                    </span>
+                    </div>
                     <!-- Hamburger button (mobile only) -->
                     <button id="nav-toggle" class="lg:hidden p-2 text-white hover:text-blue-200" aria-label="Menu" aria-expanded="false">
                         <svg id="nav-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
