@@ -2,9 +2,9 @@
     the line break in the Bavarian Chips Alliance entry. -#}
 {% component sponsor(url, logo, alt, tier, img_class="") %}
     <a target="_blank" href="{{ url }}" class="block group">
-        <div class="highlighted-grid-element h-80 flex flex-col items-center justify-center">
-            <div class="w-64 h-64 mb-4 flex items-center justify-center">
-                <img alt="{{ alt }}" src="{{ logo }}"{% if img_class %} class="{{ img_class }}"{% endif %}>
+        <div class="highlighted-grid-element md:h-80 flex flex-col items-center justify-center">
+            <div class="w-full px-8 pt-4 md:p-0 md:w-64 md:h-64 mb-4 flex items-center justify-center">
+                <img alt="{{ alt }}" src="{{ logo }}" class="{% if img_class %}{{ img_class }}{% else %}max-h-40 md:max-h-64{% endif %}">
             </div>
             <h4 class="text-lg font-semibold text-center group-hover:text-blue-600 transition-colors duration-300">
                 {{ body }}

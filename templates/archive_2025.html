@@ -11,17 +11,17 @@
                     <img src="/logo_munich_embedded_white_text.svg" alt="Munich Embedded Logo" class="w-full">
                 </div>
                 <div class="flex-1 flex flex-col items-start">
-                    <h2 class="text-2xl md:text-2xl mb-8">Konferenz für Testing, Sicherheit und Zuverlässigkeit im Embedded-Bereich</h2>
-                    <p class="text-lg mb-8">28. Oktober 2025 • München</p>
+                    <h2 class="text-2xl md:text-2xl mb-4 md:mb-8">Konferenz für Testing, Sicherheit und Zuverlässigkeit im Embedded-Bereich</h2>
+                    <p class="text-lg mb-4 md:mb-8">28. Oktober 2025 • München</p>
                 </div>
             </div>
         </div>
     </section>
     <main class="grow" id="gallery">
         <!-- Gallery Section -->
-        <section class="bg-white py-16">
+        <section class="bg-white py-8 md:py-16">
             <div class="container mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Impressionen Munich Embedded 2025</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8">Impressionen Munich Embedded 2025</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {% set thumb1 = resize_image(path="static/me25_pictures/251028_MunichEmbedded_00021.jpg", width=600, height=400, op="fit", quality=80) %}
                     <a href="/me25_pictures/251028_MunichEmbedded_00021.jpg" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -56,10 +56,10 @@
             </div>
         </section>
         <!-- Talks -->
-        <section class="py-16 bg-gray-100" id="talks">
+        <section class="py-8 md:py-16 bg-gray-100" id="talks">
             <div class="container mx-auto px-4">
                 <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">Vorträge</h2>
-                <p class="text-center mb-8">
+                <p class="text-center mb-4 md:mb-8">
                     <a target="_blank" href="https://www.youtube.com/watch?v=TKELvqpgKVw&list=PLacPyYQaY6_LR2wBFp3ms9WRgiglcQGuG" class="inline-flex items-center gap-1 text-red-600 hover:text-red-700 font-medium transition-colors duration-300">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
@@ -190,11 +190,11 @@
             </div>
         </section>
         <!-- Sponsors Section -->
-        <section class="py-16 bg-white" id="sponsors">
+        <section class="py-8 md:py-16 bg-white" id="sponsors">
             <div class="container mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Sponsoren und Partner</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8">Sponsoren und Partner</h2>
                 <!-- Sponsor Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-3xl mx-auto">
                     {{ <sponsors.me2025 /> }}
                 </div>
             </div>
