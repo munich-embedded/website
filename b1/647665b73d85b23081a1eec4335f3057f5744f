@@ -1,0 +1,19 @@
+templates/components/sponsors.html
+  s_ac505a73d359e5::t_f416a7d3cd8d60 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b1647665b73d85b23081a1eec4335f3057f5744f",
+  "prompts": {},
+  "sessions": {
+    "s_ac505a73d359e5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "29779e6d-e1a2-49f2-9e03-9612949f6159",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "JuliDi <julian@systemscape.de>"
+    }
+  }
+}
