@@ -101,6 +101,21 @@
                 </div>
             </div>
         </section>
+        <!-- Gallery Section -->
+        <section class="bg-white py-8 md:py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8">Impressionen Munich Embedded 2026</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {% for n in [135, 50, 54, 113, 70, 97, 102, 142, 148] %}
+                    {% set file = "me26_pictures/Munich_embedded_26-" ~ n ~ ".jpg" %}
+                    {% set thumb = resize_image(path="static/" ~ file, width=600, height=400, op="fit", quality=80) %}
+                    <a href="/{{ file }}" target="_blank" class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ thumb.static_path[6:] }}" alt="Munich Embedded Conference 2026" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
         <!-- Key Details Grid -->
         <section class="py-8 md:py-16 bg-gray-100">
             <div class="container mx-auto px-4">
@@ -148,7 +163,7 @@
         <!-- Schedule Section -->
         <section class="py-8 md:py-16 bg-white" id="schedule">
             <div class="max-w-6xl container mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8">Ablaufplan (vorläufig)</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-8">Ablaufplan</h2>
                 <div class="highlighted-grid-element overflow-x-auto font-mono">
                     <table class="min-w-full">
                         <thead>
